@@ -19,6 +19,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from home import views as hviews
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #home
+    path('home/', include('home.urls', namespace="home")),
+    path('', hviews.Index.as_view(), name="index"),
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
