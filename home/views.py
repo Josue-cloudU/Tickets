@@ -4,4 +4,4 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 
 # Create your views here.
 class Index(generic.TemplateView):
-    template_name = "home/index.html"
+    template_name = "content/index.html"
