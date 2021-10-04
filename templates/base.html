@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Selecao Bootstrap Template - Index</title>
+<title>{% block title %}{% endblock title%}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -40,7 +40,7 @@
 </head>
 
 <body>
-
+{% block navbar %}
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
     <div class="container d-flex align-items-center justify-content-between">
@@ -62,7 +62,8 @@
 
     </div>
   </header><!-- End Header -->
-
+{% endblock navbar %}
+{% block hero %}
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
     <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
@@ -72,7 +73,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Bienvenido</h2>
           <p class="animate__animated fanimate__adeInUp">Los motivos que nos llevaron a desarrollar este proyecto es la necesidad de tener un sistema digital de boletos para el transporte público que se efectúe de una manera ágil y sin la necesidad de interacción entre los usuarios y los choferes. </p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Leer mas</a>
         </div>
       </div>
     </div>
@@ -93,9 +94,10 @@
     </svg>
 
   </section><!-- End Hero -->
-
+{% endblock hero %}
   <main id="main">
-
+{% block content %}
+{% endblock content %}
     <!-- ======= About Section ======= -->
     <!-- <section id="about" class="about">
       <div class="container">
@@ -848,7 +850,7 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-
+{% block footer %}
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
@@ -871,7 +873,7 @@
       </div>
     </div>
   </footer><!-- End Footer -->
-
+{% block footer %}
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -886,5 +888,4 @@
   <script src="{% static 'assets/js/main.js' %}"></script>
 
 </body>
-
 </html>
