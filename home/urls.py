@@ -5,4 +5,5 @@ from home import views as views
 
 urlpatterns = [
     path('pricing', views.Pricing.as_view(), name="Pricing"),
+    path('rutas', views.Rutas.as_view(), name="Rutas"),
 ]

@@ -8,3 +8,6 @@ class Index(generic.TemplateView):
 
 class Pricing(generic.TemplateView):
     template_name = "home/pricing.html"
+
+class Rutas(generic.TemplateView):
+    template_name = "home/rutas.html"
