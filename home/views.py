@@ -11,3 +11,6 @@ class Pricing(generic.TemplateView):
 
 class Rutas(generic.TemplateView):
     template_name = "home/rutas.html"
+
+class Ticket(generic.TemplateView):
+    template_name = "home/ticket.html"
